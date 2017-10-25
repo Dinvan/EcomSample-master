@@ -30,7 +30,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         //Getting image uri from previous screen
         if (getIntent() != null) {
             stringImageUri = getIntent().getStringExtra(ImageListFragment.STRING_IMAGE_URI);
-            imagePosition = getIntent().getIntExtra(ImageListFragment.STRING_IMAGE_URI,0);
+            imagePosition = getIntent().getIntExtra(ImageListFragment.STRING_IMAGE_POSITION,0);
         }
         Uri uri = Uri.parse(stringImageUri);
         mImageView.setImageURI(uri);

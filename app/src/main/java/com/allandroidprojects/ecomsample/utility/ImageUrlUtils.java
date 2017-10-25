@@ -1,5 +1,8 @@
 package com.allandroidprojects.ecomsample.utility;
 
+import com.allandroidprojects.ecomsample.models.SectionDataModel;
+import com.allandroidprojects.ecomsample.models.SingleItemModel;
+
 import java.util.ArrayList;
 
 /**
@@ -118,10 +121,13 @@ public class ImageUrlUtils {
                 "https://static.pexels.com/photos/6932/italian-vintage-old-beautiful-medium.jpg",
                 "https://static.pexels.com/photos/7093/coffee-desk-notes-workspace-medium.jpg",
         };
+
+
         return urls;
+
     }
 
-    public static String[] getOffersUrls() {
+    public static SectionDataModel getOffersUrls() {
         String[] urls = new String[]{
                 "https://static.pexels.com/photos/1543/landscape-nature-man-person-medium.jpg",
                 "https://static.pexels.com/photos/211048/pexels-photo-211048-medium.jpeg",
@@ -138,10 +144,18 @@ public class ImageUrlUtils {
                 "https://static.pexels.com/photos/177143/pexels-photo-177143-medium.jpeg",
                 "https://static.pexels.com/photos/106936/pexels-photo-106936-medium.jpeg"
         };
-        return urls;
+       SectionDataModel sectionDataModel=new SectionDataModel();
+        sectionDataModel.setHeaderTitle("Offers");
+        sectionDataModel.setAllItemsInSection(new ArrayList<SingleItemModel>());
+        for(int i=0;i<urls.length;i++){
+            SingleItemModel singleItemModel=new SingleItemModel("Item "+i,urls[i]);
+            sectionDataModel.getAllItemsInSection().add(singleItemModel);
+        }
+
+        return sectionDataModel;
     }
 
-    public static String[] getHomeApplianceUrls() {
+    public static SectionDataModel getHomeApplianceUrls() {
         String[] urls = new String[]{
                 "https://static.pexels.com/photos/1778/numbers-time-watch-white-medium.jpg",
                 "https://static.pexels.com/photos/189293/pexels-photo-189293-medium.jpeg",
@@ -160,10 +174,18 @@ public class ImageUrlUtils {
                 "https://static.pexels.com/photos/177143/pexels-photo-177143-medium.jpeg",
                 "https://static.pexels.com/photos/106936/pexels-photo-106936-medium.jpeg"
         };
-        return urls;
+        SectionDataModel sectionDataModel=new SectionDataModel();
+        sectionDataModel.setHeaderTitle("Offers");
+        sectionDataModel.setAllItemsInSection(new ArrayList<SingleItemModel>());
+        for(int i=0;i<urls.length;i++){
+            SingleItemModel singleItemModel=new SingleItemModel("Item "+i,urls[i]);
+            sectionDataModel.getAllItemsInSection().add(singleItemModel);
+        }
+
+        return sectionDataModel;
     }
 
-    public static String[] getElectronicsUrls() {
+    public static SectionDataModel getElectronicsUrls() {
         String[] urls = new String[]{
                 "https://static.pexels.com/photos/204611/pexels-photo-204611-medium.jpeg",
                 "https://static.pexels.com/photos/214487/pexels-photo-214487-medium.jpeg",
@@ -182,10 +204,18 @@ public class ImageUrlUtils {
                 "https://static.pexels.com/photos/213384/pexels-photo-213384-medium.jpeg",
                 "https://static.pexels.com/photos/114907/pexels-photo-114907-medium.jpeg"
         };
-        return urls;
+        SectionDataModel sectionDataModel=new SectionDataModel();
+        sectionDataModel.setHeaderTitle("Electronics");
+        sectionDataModel.setAllItemsInSection(new ArrayList<SingleItemModel>());
+        for(int i=0;i<urls.length;i++){
+            SingleItemModel singleItemModel=new SingleItemModel("Item "+i,urls[i]);
+            sectionDataModel.getAllItemsInSection().add(singleItemModel);
+        }
+
+        return sectionDataModel;
     }
 
-    public static String[] getLifeStyleUrls() {
+    public static SectionDataModel getLifeStyleUrls() {
         String[] urls = new String[]{
                 "https://static.pexels.com/photos/169047/pexels-photo-169047-medium.jpeg",
                 "https://static.pexels.com/photos/160826/girl-dress-bounce-nature-160826-medium.jpeg",
@@ -205,10 +235,18 @@ public class ImageUrlUtils {
                 "https://static.pexels.com/photos/26378/pexels-photo-26378-medium.jpg",
                 "https://static.pexels.com/photos/193355/pexels-photo-193355-medium.jpeg",
         };
-        return urls;
+        SectionDataModel sectionDataModel=new SectionDataModel();
+        sectionDataModel.setHeaderTitle("LifeStyle");
+        sectionDataModel.setAllItemsInSection(new ArrayList<SingleItemModel>());
+        for(int i=0;i<urls.length;i++){
+            SingleItemModel singleItemModel=new SingleItemModel("Item "+i,urls[i]);
+            sectionDataModel.getAllItemsInSection().add(singleItemModel);
+        }
+
+        return sectionDataModel;
     }
 
-    public static String[] getBooksUrls() {
+    public static SectionDataModel getBooksUrls() {
         String[] urls = new String[]{
                 "https://static.pexels.com/photos/67442/pexels-photo-67442-medium.jpeg",
                 "https://static.pexels.com/photos/159494/book-glasses-read-study-159494-medium.jpeg",
@@ -226,7 +264,15 @@ public class ImageUrlUtils {
                 "https://static.pexels.com/photos/38167/pexels-photo-38167-medium.jpeg",
                 "https://static.pexels.com/photos/68562/pexels-photo-68562-medium.jpeg",
         };
-        return urls;
+        SectionDataModel sectionDataModel=new SectionDataModel();
+        sectionDataModel.setHeaderTitle("Books");
+        sectionDataModel.setAllItemsInSection(new ArrayList<SingleItemModel>());
+        for(int i=0;i<urls.length;i++){
+            SingleItemModel singleItemModel=new SingleItemModel("Item "+i,urls[i]);
+            sectionDataModel.getAllItemsInSection().add(singleItemModel);
+        }
+
+        return sectionDataModel;
     }
 
     // Methods for Wishlist
